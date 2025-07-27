@@ -18,7 +18,7 @@ def tokenize(text):
 #################################################
 
 # Load the data
-df = pd.read_csv('../data/train1.csv')
+df = pd.read_csv('../data/train_subset.csv')
 
 # Clean data by stripping URLs and punctuation
 df['clean_comment'] = df['comment'].astype(str).apply(clean_text)

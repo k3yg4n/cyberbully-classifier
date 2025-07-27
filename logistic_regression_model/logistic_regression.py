@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 CSV_PATH = '../data/train_subset_clean.csv'
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
-STRATIFY_LABEL = 'toxic' # Stratify to ensure the train/test splits have the same relative frequency of toxic vs. non‑toxic
+STRATIFY_LABEL = 'threat' # Stratify to ensure the train/test splits have the same relative frequency of toxic vs. non‑toxic
 
 # Load & read column names
 df = pd.read_csv(CSV_PATH)
@@ -101,68 +101,71 @@ for i, lbl in enumerate(labels):
 '''
 Evaluating on test set: 
 
+Evaluating on test set: 
+
 --- TOXIC ---
               precision    recall  f1-score   support
 
-           0       0.59      0.71      0.64       110
-           1       0.88      0.81      0.85       290
+           0       0.94      0.89      0.91       106
+           1       0.85      0.92      0.88        73
 
-    accuracy                           0.79       400
-   macro avg       0.74      0.76      0.75       400
-weighted avg       0.80      0.79      0.79       400
+    accuracy                           0.90       179
+   macro avg       0.89      0.90      0.90       179
+weighted avg       0.90      0.90      0.90       179
 
 
 --- INSULT ---
               precision    recall  f1-score   support
 
-           0       0.79      0.82      0.81       237
-           1       0.73      0.68      0.70       163
+           0       0.87      0.94      0.90       118
+           1       0.86      0.72      0.79        61
 
-    accuracy                           0.77       400
-   macro avg       0.76      0.75      0.75       400
-weighted avg       0.76      0.77      0.76       400
+    accuracy                           0.87       179
+   macro avg       0.86      0.83      0.84       179
+weighted avg       0.87      0.87      0.86       179
 
 
 --- THREAT ---
               precision    recall  f1-score   support
 
-           0       0.99      0.99      0.99       390
-           1       0.55      0.60      0.57        10
+           0       0.94      0.97      0.96       156
+           1       0.78      0.61      0.68        23
 
-    accuracy                           0.98       400
-   macro avg       0.77      0.79      0.78       400
-weighted avg       0.98      0.98      0.98       400
+    accuracy                           0.93       179
+   macro avg       0.86      0.79      0.82       179
+weighted avg       0.92      0.93      0.92       179
 
 
 --- DISCRIMINATION ---
               precision    recall  f1-score   support
 
-           0       0.95      0.95      0.95       375
-           1       0.23      0.24      0.24        25
+           0       0.97      0.94      0.96       159
+           1       0.62      0.75      0.68        20
 
-    accuracy                           0.90       400
-   macro avg       0.59      0.59      0.59       400
-weighted avg       0.90      0.90      0.90       400
+    accuracy                           0.92       179
+   macro avg       0.80      0.85      0.82       179
+weighted avg       0.93      0.92      0.92       179
+
 
 --- TOXIC ---
         pred_0  pred_1
-true_0      78      32
-true_1      54     236
+true_0      94      12
+true_1       6      67
 
 --- INSULT ---
         pred_0  pred_1
-true_0     195      42
-true_1      52     111
+true_0     111       7
+true_1      17      44
 
 --- THREAT ---
         pred_0  pred_1
-true_0     385       5
-true_1       4       6
+true_0     152       4
+true_1       9      14
 
 --- DISCRIMINATION ---
         pred_0  pred_1
-true_0     355      20
-true_1      19       6
+true_0     150       9
+true_1       5      15
 
 TO IMPROVE:
 - get more data for threat and discrimination
