@@ -110,11 +110,6 @@ print(classification_report(y_test, y_pred, zero_division=0))
 #     plt.show()
 
 """
-Evaluating on test set: 
-
-Evaluating on test set: 
-
---- TOXIC ---
               precision    recall  f1-score   support
 
            0       0.98      0.95      0.97     28670
