@@ -110,77 +110,17 @@ print(classification_report(y_test, y_pred, zero_division=0))
 #     plt.show()
 
 """
-Evaluating on test set: 
-
-Evaluating on test set: 
-
---- TOXIC ---
               precision    recall  f1-score   support
 
-           0       0.94      0.89      0.91       106
-           1       0.85      0.92      0.88        73
+           0       0.98      0.95      0.97     28670
+           1       0.67      0.85      0.75      3245
 
-    accuracy                           0.90       179
-   macro avg       0.89      0.90      0.90       179
-weighted avg       0.90      0.90      0.90       179
-
-
---- INSULT ---
-              precision    recall  f1-score   support
-
-           0       0.87      0.94      0.90       118
-           1       0.86      0.72      0.79        61
-
-    accuracy                           0.87       179
-   macro avg       0.86      0.83      0.84       179
-weighted avg       0.87      0.87      0.86       179
-
-
---- THREAT ---
-              precision    recall  f1-score   support
-
-           0       0.94      0.97      0.96       156
-           1       0.78      0.61      0.68        23
-
-    accuracy                           0.93       179
-   macro avg       0.86      0.79      0.82       179
-weighted avg       0.92      0.93      0.92       179
-
-
---- DISCRIMINATION ---
-              precision    recall  f1-score   support
-
-           0       0.97      0.94      0.96       159
-           1       0.62      0.75      0.68        20
-
-    accuracy                           0.92       179
-   macro avg       0.80      0.85      0.82       179
-weighted avg       0.93      0.92      0.92       179
-
-
---- TOXIC ---
-        pred_0  pred_1
-true_0      94      12
-true_1       6      67
-
---- INSULT ---
-        pred_0  pred_1
-true_0     111       7
-true_1      17      44
-
---- THREAT ---
-        pred_0  pred_1
-true_0     152       4
-true_1       9      14
-
---- DISCRIMINATION ---
-        pred_0  pred_1
-true_0     150       9
-true_1       5      15
+    accuracy                           0.94     31915
+   macro avg       0.82      0.90      0.86     31915
+weighted avg       0.95      0.94      0.94     31915
 
 TO IMPROVE:
 - get more data for threat and discrimination
     - oversample these classes?
 - Try a different linear model --> LinearSVC does slightly better on text
-
 """
