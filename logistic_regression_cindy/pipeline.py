@@ -1,7 +1,7 @@
 import pandas as pd
 from model import CyberbullyingDetector
 # Load data
-df = pd.read_csv("cyberbullingData.csv")
+df = pd.read_csv("output/clean_data.csv")
 modelDetector = cyberbullyingDetection()
 
 df['text'] = df['text'].apply(modelDetector.clean)
