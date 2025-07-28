@@ -1,3 +1,7 @@
+# Other
+.DS_STORE
+tfidf_dataset.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
