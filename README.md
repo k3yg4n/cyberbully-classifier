@@ -18,4 +18,4 @@ Each model is implemented in a Jupyter notebook located under an appropriately l
 
 ## Presentation/Report
 
-The presentation for the project can be found at `presentation.pdf`
+The presentation for the project can be found at `presentation.pdf`.
